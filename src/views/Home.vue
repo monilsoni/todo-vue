@@ -1,25 +1,19 @@
 <template>
   <div id="app">
-    <HelloWorld msg="Hello, Monil."/>
-    <Header/>
     <AddTodo v-on:add-todo="addTodo"/>
     <Todos v-bind:todos="todos" v-on:del-todo="deleteTodo"/>
   </div>
 </template>
 
 <script>
-  import HelloWorld from "../components/HelloWorld";
   import Todos from '../components/Todos'
   import AddTodo from "../components/AddTodo";
-  import Header from "../components/layout/Header";
   import axios from "axios";
 
   export default {
-    name: 'App',
+    name: 'Home',
     components: {
       Todos,
-      HelloWorld,
-      Header,
       AddTodo
     },
     data() {
@@ -58,7 +52,6 @@
     -moz-osx-font-smoothing: grayscale;
     text-align: center;
     color: #2c3e50;
-    margin-top: 60px;
     background-color: #e4f5ef;
   }
 
